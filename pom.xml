@@ -84,7 +84,6 @@
                     <encoding>UTF-8</encoding>
                     <consoleOutput>true</consoleOutput>
                     <failsOnError>true</failsOnError>
-                    <violationSeverity>warning</violationSeverity>
                     <linkXRef>false</linkXRef>
                 </configuration>
                 <executions>
@@ -97,7 +96,6 @@
                     </execution>
                 </executions>
             </plugin>
-
         </plugins>
     </build>
 
