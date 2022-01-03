@@ -31,6 +31,7 @@ jobs:
         checkstyle_config: './checkstyle_config.xml'
         checkstyle_version: '9.2'
         workdir: './src/main/java'
+        level: 'info'
           
 # on: pull_request
 
