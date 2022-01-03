@@ -5,10 +5,12 @@ on:
     branches:
      - master
      - develop
+     - Dev
   pull_request:
     branches:
      - master
      - develop
+      - Dev
 
 jobs:
   java-ci-checks:
