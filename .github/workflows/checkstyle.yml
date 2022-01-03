@@ -13,7 +13,7 @@ jobs:
 #           checkstyle_version: '9.2'
 #           workdir: './src/main/java'
 #           reporter: 'github-check'
-#           level: 'warning'
+#           level: 'info'
           
           
   checkstyle_job:
