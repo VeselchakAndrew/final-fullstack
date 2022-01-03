@@ -28,10 +28,10 @@ jobs:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         reporter: 'github-pr-check'
         tool_name: 'testtool'
-#         checkstyle_config: './checkstyle_config.xml'
+        checkstyle_config: './checkstyle_config.xml'
         checkstyle_version: '9.2'
         workdir: './src/main/java'
-        level: 'error'
+        level: 'warning'
           
 # on: pull_request
 
