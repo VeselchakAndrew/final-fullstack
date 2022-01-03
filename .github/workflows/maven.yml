@@ -10,7 +10,9 @@ on:
     branches: [ "main" ]
 
 jobs:
-checkstyle_job:
+
+
+  checkstyle_job:
     runs-on: ubuntu-latest
     name: Checkstyle job
     steps:
@@ -20,11 +22,10 @@ checkstyle_job:
         uses: nikitasavinov/checkstyle-action@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          version: '9.2'
+          checkstyle_version: '9.2'
           reporter: 'github-pr-check'
-          checkstyle_config: './checkstyle_config.xml'
-
-
+          workdir: './src/main/java'
+          properties_file: './checkstyle_config.xml'
 
 
   build:
@@ -32,12 +33,12 @@ checkstyle_job:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Set up JDK 11
-      uses: actions/setup-java@v2
-      with:
-        java-version: '11'
-        distribution: 'adopt'
-        cache: maven
-    - name: Build with Maven
-      run: mvn -B package --file pom.xml
+      - uses: actions/checkout@v2
+      - name: Set up JDK 11
+        uses: actions/setup-java@v2
+        with:
+          java-version: '11'
+          distribution: 'adopt'
+          cache: maven
+      - name: Build with Maven
+        run: mvn -B package --file pom.xml
