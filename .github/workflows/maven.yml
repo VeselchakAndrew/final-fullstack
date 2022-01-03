@@ -10,7 +10,9 @@ on:
     branches: [ "main" ]
 
 jobs:
-  checkstyle_job:
+
+checkstyle_job:
+
     runs-on: ubuntu-latest
     name: Checkstyle job
     steps:
@@ -23,6 +25,7 @@ jobs:
           version: '9.2'
           reporter: 'github-pr-check'
           checkstyle_config: './checkstyle_config.xml'
+
 
   build:
 
