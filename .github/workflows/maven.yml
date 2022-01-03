@@ -10,6 +10,8 @@ on:
     branches: [ "main" ]
 
 jobs:
+
+
   checkstyle_job:
     runs-on: ubuntu-latest
     name: Checkstyle job
@@ -20,9 +22,10 @@ jobs:
         uses: nikitasavinov/checkstyle-action@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          version: '9.2'
+          checkstyle_version: '9.2'
           reporter: 'github-pr-check'
-          checkstyle_config: './checkstyle_config.xml'
+          workdir: './src/main/java'
+          properties_file: './checkstyle_config.xml'
 
   build:
 
