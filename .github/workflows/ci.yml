@@ -2,16 +2,10 @@ name: CI
 
 on:
   push:
-    branches:
-     - master
-     - develop
-     - Dev
+    branches: [master. main, develop, Dev]
   pull_request:
-    branches:
-     - master
-     - develop
-      - Dev
-
+    branches: [master. main, develop, Dev]
+     
 jobs:
   java-ci-checks:
     name: Automated Java CI checks
