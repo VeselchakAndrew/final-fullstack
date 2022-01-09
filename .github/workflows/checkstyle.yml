@@ -13,9 +13,9 @@ jobs:
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         reporter: 'github-pr-check'
-        tool_name: 'testtool'
+        tool_name: 'reviewdog'
         checkstyle_config: './checkstyle_config.xml'
-        checkstyle_version: '9.2'
+        checkstyle_version: '9.2.1'
         workdir: './src/main/java'
         level: 'warning'
           

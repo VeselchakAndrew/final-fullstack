@@ -18,6 +18,7 @@
         <!--SonarCloud properties-->
         <sonar.organization>veselchakandrew</sonar.organization>
         <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+
     </properties>
     <dependencies>
         <dependency>
@@ -79,7 +80,7 @@
                     <dependency>
                         <groupId>com.puppycrawl.tools</groupId>
                         <artifactId>checkstyle</artifactId>
-                        <version>9.2</version>
+                        <version>9.2.1</version>
                     </dependency>
                 </dependencies>
                 <configuration>
@@ -102,34 +103,20 @@
             <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
-                <version>0.8.4</version>
+                <version>0.8.7</version>
                 <executions>
                     <execution>
+                        <id>jacoco-initialize</id>
                         <goals>
                             <goal>prepare-agent</goal>
-                        </goals>
-                    </execution>
-                    <!-- attached to Maven test phase -->
-                    <execution>
-                        <id>report</id>
-                        <phase>test</phase>
-                        <goals>
-                            <goal>report</goal>
                         </goals>
                     </execution>
                 </executions>
             </plugin>
             <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-surefire-plugin</artifactId>
-                <version>2.22.2</version>
-                <configuration>
-                    <reportFormat>plain</reportFormat>
-                    <includes>
-                        <include>**/*Test*.java</include>
-                        <include>**/*IT*.java</include>
-                    </includes>
-                </configuration>
+                <groupId>org.eluder.coveralls</groupId>
+                <artifactId>coveralls-maven-plugin</artifactId>
+                <version>4.3.0</version>
             </plugin>
         </plugins>
     </build>
