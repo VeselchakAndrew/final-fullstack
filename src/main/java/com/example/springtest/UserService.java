@@ -1,6 +1,6 @@
 package com.example.springtest;
 
-import com.example.springtest.DTO.User;
+import com.example.springtest.Dto.User;
 import java.util.ArrayList;
 import java.util.List;
 
