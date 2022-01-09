@@ -28,11 +28,11 @@ jobs:
           java-version: 11
 
       - name: Compile and run tests with Maven
-        run: mvn clean test
+        run: mvn clean test jacoco:report coveralls:report
+
 
 
       - name: Coveralls
-        run: mvn clean test jacoco:report coveralls:report
         uses: coverallsapp/github-action@master
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}

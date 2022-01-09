@@ -107,7 +107,7 @@
                 <version>0.8.7</version>
                 <executions>
                     <execution>
-                        <id>jacoco-initialize</id>
+                        <id>prepare-agent</id>
                         <goals>
                             <goal>prepare-agent</goal>
                         </goals>
@@ -118,6 +118,9 @@
                 <groupId>org.eluder.coveralls</groupId>
                 <artifactId>coveralls-maven-plugin</artifactId>
                 <version>4.3.0</version>
+                <configuration>
+                    <repoToken>w1YRXJHm6NmeU8iQy7xne4Dy3aMAgHSii</repoToken>
+                </configuration>
             </plugin>
         </plugins>
     </build>
