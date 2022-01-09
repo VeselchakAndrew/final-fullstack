@@ -1,4 +1,4 @@
-package com.example.springtest.Dto;
+package com.example.springtest.dto;
 
 public class User {
   private final int id;

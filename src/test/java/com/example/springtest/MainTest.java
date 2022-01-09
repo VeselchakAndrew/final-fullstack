@@ -1,6 +1,6 @@
 package com.example.springtest;
 
-import com.example.springtest.Dto.User;
+import com.example.springtest.dto.User;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
